@@ -1,0 +1,27 @@
+Explicação da estrutura:
+
+<!DOCTYPE html>: Define a versão do HTML que está sendo usada.
+
+<html lang="en">: Elemento raiz da página, indicando o idioma da página (neste caso, inglês).
+
+<head>: Contém metadados, como configurações de caracteres, viewport e títulos.
+
+<meta charset="UTF-8">: Define a codificação de caracteres como UTF-8.
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">: Configuração para ajustar 
+a largura da página ao dispositivo e definir a escala inicial.
+
+<title>: Define o título da página, exibido na barra de título do navegador.
+
+<body>: Contém todo o conteúdo visível da página.
+
+<header>, <nav>, <main>, <section>, <footer>: Elementos semânticos que ajudam a estruturar 
+o conteúdo da página de maneira mais significativa.
+
+<h1>, <h2>, <p>: Elementos para cabeçalhos e parágrafos.
+
+<nav>: Pode conter links de navegação.
+
+<footer>: Geralmente contém informações de rodapé, como direitos autorais.
+
+Comentários: Adicionados para explicar o propósito de diferentes seções.
