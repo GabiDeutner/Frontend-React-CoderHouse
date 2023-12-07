@@ -1,0 +1,46 @@
+HTML
+
+HyperText Markup Language
+Linguagem de Marcação de Hipertext
+
+
+   _______________
+# |-- src/
+# |        -- CSS/ Arquivos.css
+# |        -- assets/ Arquivos de mídias
+# |        -- JS/ Arquivos.js
+# |-- index.html
+
+
+Link Favicon Converter: https://favicon.io/favicon-converter/
+
+Figma Community - a comunidade do Figma onde voce pode encontrar muitos projetos.
+https://www.figma.com/community
+
+
+https://pagespeed.web.dev/analysis/https-gents-com-br/rtcon38xu9?form_factor=mobile
+https://pagespeed.web.dev
+
+Análise de um Projeto: https://pagespeed.web.dev/analysis/https-aurioncrud-netlify-app/q2qvvowgan?form_factor=mobile
+
+- Planet Scale: Data Center gratuito
+- netlify: hospedagem gratuita
+- Material Design - Angular
+- Design Systems - design de sistemas: https://designsystemsrepo.com/
+- Marketplace de templates https://themeforest.net/category/site-templates/
+
+https://medium.com/pretux/atomic-design-o-que-%C3%A9-como-surgiu-e-sua-import%C3%A2ncia-para-a-cria%C3%A7%C3%A3o-do-design-system-e3ac7b5aca2c
+
+
+- Templates
+- Atomic Design
+
+- Design System: Figma e Framer
+https://www.framer.com/
+
+https://www.youtube.com/@Figma/playlists
+
+- Sempre desenhar um site map com hierarquia de páginas antes de criar um site
+- Criar o site map com Wireframe
+- Google fontes: https://fonts.google.com/
+- Criar conta no framer e instalar o figma
