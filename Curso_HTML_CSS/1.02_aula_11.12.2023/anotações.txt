@@ -1,0 +1,85 @@
+
+https://creativecommons.org/licenses/list.en
+https://acervolima.com/gerenciamento-de-versao-e-lancamento-em-engenharia-de-software/
+
+https://gitexplorer.com/
+
+https://www.producthunt.com/products/git-explorer
+
+>>> ver a versão do git: git version
+
+>>> Configurar o usuário e senha no git:
+$ git config --global user.name "Fulano de Tal"
+$ git config --global user.email fulanodetal@exemplo.br
+
+>>> Para verificar se a configuração foi feita de forma correta use os comandos: 
+git config user.name
+git config user.email
+
+É preciso ter uma versão do Git configurada com a sua identidade funcionando no seu sistema.
+
+>>> Criando um repositório:
+Usar o comando git init
+
+>>> Verificar o status do repositório:
+Usar o comando git status
+
+>>> Área de staging
+usar o comando git add “nome do arquivo”, que permite preparar o arquivo para 
+depois fazer o upload para o repositório.
+
+Também é possível usar o git add . , que anexa todos os arquivos novos.
+Para verificar se funcionou, utilizamos novamente o git status.
+
+>>> Salvar os arquivos no repositório local:
+Uma vez que os nossos arquivos estejam na Staging Area, devemos passá-los para o nosso 
+repositório local. E, para isso, devemos usar o comando git commit, que é o comando que 
+vai nos permitir enviar os nossos arquivos para o repositório que foi criado. 
+
+O comando é o seguinte: 
+git commit -m “Comentário sobre o que se trata as modificações”
+
+
+>>> git log: Listar commits
+Com o git log, podemos ver os logs (histórico) do que aconteceu no repositório.
+
+Com o git podemos visualizar todos commits.
+
+Lembre-se que, ao fazer alterações, adicioná-las e efetivá-las, cria-se um histórico 
+dessas alterações, os logs.
+
+A possibilidade de verificar todos os commit que foram feitos é uma vantagem dos controladores 
+de versões, que permitem visualizar códigos anteriores e, se houver um problema, facilitar sua 
+identificação.
+
+
+>>> Ver os commits de forma simplificada
+Para ver os commits realizados de forma simplificada podemos usar o comando git log --oneline. 
+
+>>> Git no VS Code 
+
+Abra seu repositório no VS Code
+No canto superior esquerdo, temos um ícone que nos permite trabalhar com o Git de uma forma 
+visual dentro do VS Code
+Ao clicar sobre ele vemos todas as alterações que foram feitas no projeto e estão no 
+1º estágio (Alterações)
+Clicando no ícone + em cada arquivo, enviamos eles para o 2º estágio (Alterações Preparadas)
+Para fazer o commit, basta escrever a mensagem no campo superior e apertar o botão “Confirmação”. 
+Assim, todos os arquivos que estiverem em “Alterações Preparadas” serão enviados para o 
+Repositório, no 3º estágio
+
+
+
+
+>>>>> RESUMO
+- ver a versão do git: git version
+- Configurar o usuário e senha no git
+- Criando um repositório: git init
+- Verificar o status do repositório: git status
+- Área de staging: git add "nome do arquivo" ou git add .
+- Salvar os arquivos no repositório local: git commit -m "mensagem commit"
+- Listar commits: git log
+- Ver os commits de forma simplificada: git log --oneline
+
+
+
