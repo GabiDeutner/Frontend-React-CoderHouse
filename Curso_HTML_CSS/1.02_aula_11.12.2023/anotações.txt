@@ -92,3 +92,5 @@ cd "nome da pasta"
 vc entra em uma pasta
 cd ..
 vc volta uma pasta
+
+
