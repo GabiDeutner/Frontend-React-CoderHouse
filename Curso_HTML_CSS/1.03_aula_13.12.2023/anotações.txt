@@ -1,0 +1,13 @@
+GitHub
+
+O Github é uma espécie de “rede social” de programadores. Com esta plataforma, podemos subir os nossos projetos 
+e deixar que outras pessoas colaborem.
+
+Criando um repositório no GitHub
+
+Vamos criar um repositório chamado “primeiroprojeto”, para subir os arquivos que criamos na aula passada.
+Obs.: É necessário seguir as regrinhas de arquivos: não ter acento, não ter espaço, não é indicado utilizar 
+letras maiúsculas, para separar palavras use tracinho, etc.
+
+Escolha entre “público” ou “privado” e depois, clique em “Create repository”.
+Obs.: Use público para que possamos compartilhar e publicar.
