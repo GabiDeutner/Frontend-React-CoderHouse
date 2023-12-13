@@ -1,4 +1,31 @@
-GitHub
+>>>> Links úteis
+
+> Redes Sociais de desenvolvedores: 
+    
+    https://dev.to/
+
+    https://pt.w3d.community/
+
+    https://www.reddit.com/
+
+
+> W3C: https://www.w3.org/
+
+> Experimentos com o navegador: https://experiments.withgoogle.com/collection/chrome
+
+> Code Pen: https://codepen.io
+
+> Stack Overflow: https://stackoverflow.com/
+
+> Chat GPT: https://chat.openai.com/
+
+> Bit Bucket: https://bitbucket.org/
+
+> JIRA: https://www.atlassian.com/br/software/jira
+
+
+
+>>>> GitHub
 
 O Github é uma espécie de “rede social” de programadores. Com esta plataforma, podemos subir os nossos projetos 
 e deixar que outras pessoas colaborem.
@@ -11,3 +38,121 @@ letras maiúsculas, para separar palavras use tracinho, etc.
 
 Escolha entre “público” ou “privado” e depois, clique em “Create repository”.
 Obs.: Use público para que possamos compartilhar e publicar.
+
+
+>>>> Para Lembrar:
+
+>> git init: indicar que nesse diretório, onde executamos o comando, será criado um repositório para ser usado com o GIT.
+
+>> git status: para verificar o status do nosso repositório.
+
+>> git add .: adicionar todos as alterações (arquivos criados, modificados ou eliminados) ao estágio 2 (Staging area).
+
+>> git commit -m “Mensagem”: envio das alterações para o repositório, no estágio 3.
+
+>> git log --oneline: para visualizar os commits realizados.
+
+
+Para mandar um repositório local para o repositório remoto (Github):
+
+git remote add origin “link do repositório”
+git remote add origin https://github……
+
+
+
+
+>>>> Enviar o código para o GitHub
+
+Vamos subir todos os nossos arquivos para o repositório do Github.
+Para fazer isso, o novo comando que usaremos aqui é o git push.
+
+
+
+>>>> Editando no GitHub
+
+O GitHub nos permite criar e editar arquivos dentro da sua plataforma.
+
+Para criar um novo arquivo basta acessar seu repositório e clicar em Add File > Create New File.
+
+Para editar um arquivo basta acessar o arquivo desejado e clicar no ícone de lápis. 
+
+Ao finalizar, salve e faça o commit das alterações dentro da própria plataforma.
+
+
+
+>>>> Atualizando um repositório
+
+Caso seja feita alguma atualização no repositório pelo GitHub ou em outro computador, também precisamos atualizar a
+ nossa versão local, que está no nosso computador.
+
+Para isso utilizamos o comando git pull.
+
+
+
+>>>> Clonando um repositório
+
+Podemos também pegar um repositório que esteja disponível no GitHub e baixar para usar no nosso computador, 
+podendo ser um repositório seu ou de outro usuário.
+
+Para isso, no terminal, utilizamos o comando git clone seguido da URL do repositório.
+
+git clone https://github.com/minhacontagmail/primeiroprojeto.git
+
+
+
+>>>> Mais propriedades do GitHub
+
+Como plataforma colaborativa, o GitHub oferece aos seus usuários uma grande quantidade de funcionalidades para a 
+gestão de projetos, todas apoiadas pela comunidade. 
+
+Vamos conhecer um pouco de cada uma.
+
+
+>>>> Adicionar colaboradores
+
+Para adicionar colaboradores no seu projeto siga os seguintes passos:
+
+1. Acesse seu projeto no GitHub
+2. Vá em “Settings”
+3. Depois em “Collaborators”
+4. Em “Add people” insira o username de cada colaborador
+5. O colaborador recebe um e-mail e precisa aceitar o convite
+
+
+
+>>>> Comandos para o GitHub
+
+> git push: para enviar os commits para o GitHub
+
+> git pull: para buscar os commits que já foram feitos no GitHub
+
+> git clone: para baixar um repositório do GitHub para o seu computador
+
+> git remote add origin: para vincular seu projeto local com um repositório do GitHub
+
+
+
+>>>> GitHub Pages
+
+O GitHub lhe permite publicar seus projetos on-line. 
+Para gerar uma GitHub page, siga os passos: 
+
+1. Acesse seu repositório no GitHub e vá em “Settings”.
+2. Clique em “Pages”.
+3. Selecione a branch que será publicada (master ou main).
+4. Salve as alterações.
+
+O GitHub irá publicar sua página e disponibilizar um link padrão de acesso (pode demorar alguns minutos).
+
+
+
+
+>>>> GitHub no VS Code
+
+> Abra seu repositório no VS Code
+
+> No canto inferior esquerdo, vemos a indicação de commits para serem enviados (push) ou baixados (pull) do GitHub
+
+> Ao clicar sobre eles o pull e o push são feitos automaticamente, caso não haja nenhum conflito
+
+
