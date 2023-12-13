@@ -1,3 +1,9 @@
+Bitbucket
+https://bitbucket.org/
+
+GitHub
+https://github.com/
+
 
 https://creativecommons.org/licenses/list.en
 https://acervolima.com/gerenciamento-de-versao-e-lancamento-em-engenharia-de-software/
@@ -82,4 +88,7 @@ Repositório, no 3º estágio
 - Ver os commits de forma simplificada: git log --oneline
 
 
-
+cd "nome da pasta"
+vc entra em uma pasta
+cd ..
+vc volta uma pasta
