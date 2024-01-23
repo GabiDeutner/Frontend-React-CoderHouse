@@ -1,0 +1,553 @@
+>>>  CSS (Cascading Style Sheets) 
+
+CSS (Cascading Style Sheets) é uma linguagem web para aplicação de formato visual (cor, tamanho, separação e localização) 
+ao HTML. Assim, pode alterar completamente a aparência de qualquer tag HTML. 
+
+>>> Incluindo CSS na página
+
+> Forma Externa
+
+Forma EXTERNA: dentro da tag <head>, você chama o arquivo CSS de que precisa (lembre-se do uso de caminhos 
+relativos e absolutos).
+
+<link rel="stylesheet" href="arquivo.css">
+
+
+> Forma Interna
+
+Forma INTERNA: recomenda-se que esteja dentro da tag <head>. Você pode colocar no <body>, mas seria mais confuso.
+
+<style>
+    /* comentário de CSS, dentro desta tag, vai o código CSS, */
+</style>
+
+
+> Forma Inline
+
+Forma INLINE: muito pouco recomendável, é usar para “patches” específicos ou testes. Torna-se difícil mantê-lo.
+
+<h1>Cabeçalho H1 sem formatação</h1>
+<h2 style="CÓDIGO CSS">Cabeçalho H2 com formatação CSS</h2>
+
+<p>Parágrafo sem formatação</p>
+<p style="CÓDIGO CSS">Parágrafo com formatação CSS</p>
+<p>Outro parágrafo sem formatação</p>
+
+
+>>> Sintaxe de CSS
+
+> Regras Sintáticas
+
+- Cada declaração CSS é composta por um conjunto de pares propriedade: valor; 
+- Não é afetado pelo espaço em branco. 
+- As propriedades podem ser escritas em uma linha ou uma abaixo da outra.
+
+> Sintaxe
+
+seletor {
+    propriedade1: valor;
+    propriedade2: valor;
+}
+
+Exemplo:
+
+h1 {
+    color: red;
+}
+
+
+> Pai e filhos
+
+Quando você tem uma tag “dentro” de outra, o que você faz é aplicar o conceito de pais e filhos. 
+Neste caso, section é o pai de article e, por sua vez, article é o pai de h2 e p.
+
+<section>
+    <article>
+        <h2> Título </h2>
+        <p> Lorem ipsum dolor sit amet,
+            consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et
+            dolore magna aliqua. Ut enim ad
+            minim veniam, quis nostrud
+            exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.
+        </p>
+    </article>
+</section>
+
+
+> Isso permite adicionar atributos específicos a “filhos”, sem alterar os do “pai”. 
+Um pai pode ter muitos filhos e todos eles herdam suas características, e também podem ter características particulares.
+
+section article h2 {
+    background-color: #cccccc;
+    width: 500px;
+    height: 500px;
+}
+
+Neste caso, é observada a forma correta de declarar cada estilo.
+Quando você deseja selecionar uma tag, deve incluir as tags pais para que sejam mais específicas ao aplicar estilos.
+
+<section>
+    <article>
+        <h2> Título </h2>
+        <p> Lorem ipsum dolor sit amet,
+            consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et
+            dolore magna aliqua. Ut enim ad
+            minim veniam, quis nostrud
+            exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.
+        </p>
+    </article>
+</section>
+
+
+section {
+    padding: 50px 30px 20px 60px;
+    margin-left: 40px;
+}
+section article {
+    background-color: #cccccc;
+    width: 500px;
+    height: 500px;
+}
+section article p {
+    line-height: 4;
+}
+
+
+>>> Atributo Class
+
+O atributo global class é uma lista das classes de um elemento, separada por espaços.
+Classes permitem que o CSS selecionem e acessem elementos específicos através dos seletores de classe.
+Utilizada quando deseja aplicar o mesmo estilo para mais de um elemento. 
+
+HTML: atributo class=“”
+
+No HTML, para aplicar uma classe você deve usar o atributo “class” e depois colocar no valor o nome da classe. 
+É aconselhável colocar um nome que faça referências aos estilos que terá. 
+
+<img src="" class="bordasArredondadas">
+
+
+> Class a partir de CSS
+
+No CSS, para referenciar a classe que foi criada no HTML basta inserir um “.” à frente do seu nome. Por exemplo:
+
+.bordasArredondadas {
+    /* código CSS */
+}
+
+>>> Mais de uma class
+
+É possível aplicar mais de uma classe para cada tag separada por um espaço. Desta forma, você pode ter estilos 
+diferentes para cada classe.
+
+<img src="" class="bordasArredondadas imgPequena">
+
+
+
+>>> Atributo ID
+
+ID: Geralmente é usado para nomear partes do código e setores como, por exemplo, quando você deseja nomear diferentes 
+seções.
+É possível colocar ID a qualquer elemento HTML para dar a ele um “nome”. 
+
+HTML: Atributo id=“”
+
+Para aplicar um ID no HTML, você deve usar o atributo “id” e, em seguida, no valor o nome do id. 
+
+Por exemplo:
+
+<section id="produtos">
+    Lorem ipsum dolor sit amet
+    consectetur adipisicing elit.
+</section>
+
+
+>>> ID de CSS
+
+No CSS, para referenciar o id que foi criado no HTML basta inserir um “#” à frente do seu nome. Por exemplo:
+
+#produtos {
+    /* código CSS */
+}
+
+
+>>> Comparação - CLASS vs. ID
+
+Exemplo
+
+Tanto a ID como Class podem ser utilizadas dentro do html em diferentes tags.
+No entanto, os nomes dados às classes podem ser repetidos, enquanto os utilizados nas IDs não.
+
+HTML:
+
+<section id="produto">
+    <article class="vermelho">
+    </article>
+    <article id="produto">
+    </article>
+</section>
+
+
+HTML:
+
+<section id="produto">
+    <article class="vermelho">
+    </article>
+    <article class="vermelho">
+    </article>
+</section>
+
+
+>>> Herança e Cascata
+
+> Herança
+
+Em geral, essas propriedades são intuitivas. Por exemplo, você pode herdar o tamanho e a cor da letra de um elemento 
+pai, a menos que o elemento filho tenha outros estilos aplicados. Você pode ver mais sobre isso aqui. 
+
+HTML:
+
+<div>
+    <p>
+        Este parágrafo ficará em
+        vermelho, por herança
+    </p>
+</div>
+
+
+
+
+ CSS:
+
+ div {
+    color: red;
+}
+
+
+
+
+>>> Precedência de declarações
+
+Quando regras diferentes apontam para o mesmo objeto:
+
+- Se forem propriedades diferentes, são somadas (combinadas). 
+- Se tiverem alguma propriedade repetida, apenas uma permanecerá.
+- Isso é o que se denomina precedência. 
+- ID sobrepõe qualquer outra regra.
+- Class substitui as regras de tag, mas não as de ID.
+- Tags têm a menor precedência.
+
+ID > Class > Tags
+
+
+
+
+>>> Estilos Inline
+
+Se você utiliza estilos inline, eles substituirão qualquer estilo nas páginas externas de CSS. 
+Podemos dizer que os estilos inline são os que têm uma maior especificidade, portanto: não é recomendável 
+utilizá-los em sua página.
+
+<p style="color: red">Parágrafo vermelho</p>
+
+
+
+!important
+
+Se você tiver somente 3 regras CSS é improvável que “colidam”, mas em um CSS extenso é mais comum.
+Quando isso acontece pode ser usado o !importante para ajudar.
+
+A declaração !important corta a precedência.  É escrito após o valor da propriedade CSS que você deseja tornar mais 
+importante.  É utilizado um !important para cada valor sobreposto.  
+
+Dica: É bom conhecer o !important porque você pode vê-lo em algum código-fonte CSS. No entanto, não o use a 
+menos que seja absolutamente necessário, pois ele deixa o código confuso, especialmente se você tiver uma folha 
+de estilo grande.
+
+
+
+>>> Reset
+
+Reset CSS
+
+O reset CSS contém definições para propriedades problemáticas em seu código-fonte, que os designers precisam 
+unificar desde o início.
+Por exemplo, a maioria dos navegadores estabelece uma margem padrão entre o conteúdo da página web e sua própria 
+janela, cujo valor varia de um navegador para outro.
+
+
+Para corrigir essa diferença, os designers de sites costumam declarar a seguinte linha no início de 
+suas folhas de estilo:
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+Essa única linha indica, com o seletor universal de CSS representado por um asterisco, que todos os elementos 
+contidos no HTML ao qual é aplicado não terão margens. 
+
+Desta forma, será obrigatório declarar as margens necessárias no design de sua página web, em cada um dos locais 
+onde for necessário, sem ter que deixar esse aspecto para decisão de qualquer navegador, e minimizando as diferenças 
+visuais entre eles.
+
+Atenção: o reset CSS pode conter essas e muitas outras linhas de código que, em seu conjunto, serão usadas 
+para unificar sua visualização entre os navegadores.
+
+
+>>> Primeiras Propriedades
+
+> Propriedade: color
+
+Através desta propriedade, você poderá adicionar cor aos textos do seu site
+mas… como as cores são escolhidas? 
+
+
+> Tipos de valores para color
+
+Existem valores diferentes, mas vamos nos concentrar em 3:
+- Por nome da cor (ex.: red).
+- Hexadecimal (ex.: #ffffff).
+- RGB (por exemplo: 50, 212, 227). Se você adicionar mais um valor, é possível gerenciar sua opacidade. 
+(red, green, blue) cada cor permite até 256 valores.
+
+
+>>> Propriedade: COR
+
+No VS Code, você simplesmente “para” o mouse sobre a cor. 
+Por exemplo, escreva “red” e faça o teste.
+
+
+
+>>> Estilos para Listas
+
+list-style-type
+
+CSS
+
+ol {
+    list-style-type: none;
+}
+ul {
+    list-style-type: none;
+}
+
+
+Aplicando esta propriedade e este valor, podemos eliminar os bullets e os números.
+
+
+
+>>> Estilos para Textos
+
+
+
+font-style
+
+CSS
+
+.normal {
+    font-style: normal;
+}
+.italico {
+    font-style: italic;
+}
+
+
+
+
+
+font-weight
+
+CSS
+
+.negrito {
+    font-weight: bold;
+}
+.normal {
+    font-weight: normal;
+}
+
+
+
+
+font-size
+
+CSS
+
+.textoGrande {
+    font-size: 20px;
+}
+.textoRelativo {
+    font-size: 200%;
+}
+
+
+
+
+font-family
+
+CSS
+
+.impact {
+    font-family: Impact, sans-serif;
+}
+.comicSans {
+    font-family: "Comic Sans MS", sans-serif;
+}
+
+
+
+
+>>> font-family
+
+As tipografias Serif são aquelas que levam a serifas, ou seja, detalhes adicionais nas bordas das letras. 
+O exemplo por excelência de Serif é Times New Roman. São muito utilizadas em jornais impressos, já que os detalhes 
+das letras ajudam a acompanhar a leitura. Use-as se quiser transmitir classicismo, formalidade, precisão, tradição, 
+delicadeza e/ou refinamento. 
+
+Pelo contrário, as tipografias Sans Serif, como seu próprio nome indica, sans é sem em francês, não possuem esses 
+detalhes. Algumas das mais conhecidas são Arial ou Calibri. Elas são utilizadas muito em ambientes digitais, já que 
+os detalhes são difíceis de capturar em pixels. Transmitem força, modernidade, vanguarda, elegância e atualidade, 
+aos designs e textos em que se inserem.
+
+
+
+text-align
+
+CSS
+
+.centralizar {
+    text-align: center;
+}
+.aDireita {
+    text-align: right;
+}
+
+
+
+
+text-decoration
+
+CSS
+
+.sublinhado {
+    text-decoration: none;
+}
+.tachado {
+    text-decoration: line-through;
+}
+
+
+
+
+>>> Estilos para Background
+
+
+background-color
+
+CSS
+
+.fundo {
+    background-color: yellow;
+}
+
+
+
+background-image
+
+CSS
+
+.catsandstars {
+    background-image: url("https://mdn.mozillademos.org/files/11991/startransparent.gif"),
+url("https://mdn.mozillademos.org/files/7693/catfront.png");
+}
+
+
+
+background-repeat
+
+CSS
+
+.exemplo {
+    background-image:
+url("https://mdn.mozillademos.org/files/11991/startransparent.gif"),
+url("https://mdn.mozillademos.org/files/7693/catfront.png");
+    background-repeat: repeat-x, repeat-y;
+}
+
+
+
+
+background-position
+
+CSS
+
+.exemplo {
+    background-image:
+url("https://mdn.mozillademos.org/files/12005/starsolid.gif");
+    background-position: right center;
+}
+
+
+
+background-size
+
+CSS
+
+.exemplo {
+    background-image:
+url("https://mdn.mozillademos.org/files/12005/starsolid.gif");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+
+>>> Unidades de medida
+
+Existe uma ampla variedade de absolutas e relativas, mas vamos nos concentrar em:
+
+Absolutas
+Px (pixels): é a unidade que usa as telas. 
+
+Relativas
+Rem: tamanho da tipografia na raíz do HTML utilizada como base de referência
+Porcentagem: fração da dimensão do elemento pai
+
+
+
+>>> Tipografia
+
+> Tipografia local
+
+Vimos que usando “font-family”, é possível adicionar algumas fontes limitadas, mas podemos usar inúmeras opções 
+de fontes, precisamos apenas fazer o download da fonte e em seguida adicionarmos ao nosso diretório raiz. 
+
+
+
+> Tipografia WEB
+
+Vimos que usando “font-family”, é possível adicionar algumas fontes limitadas e outras através do download, 
+mas também podemos usar inúmeras opções de fontes com Google Fonts. 
+
+
+CSS
+
+h1 {
+    font-family: 'Roboto', sans-serif;
+}
+
+
+
+HTML
+
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap” rel="stylesheet">
+    <title>Document</title>
+ </head>
+
