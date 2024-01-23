@@ -1,0 +1,214 @@
+>>>  CSS (Cascading Style Sheets) 
+
+CSS (Cascading Style Sheets) é uma linguagem web para aplicação de formato visual (cor, tamanho, separação e localização) 
+ao HTML. Assim, pode alterar completamente a aparência de qualquer tag HTML. 
+
+>>> Incluindo CSS na página
+
+> Forma Externa
+
+Forma EXTERNA: dentro da tag <head>, você chama o arquivo CSS de que precisa (lembre-se do uso de caminhos 
+relativos e absolutos).
+
+<link rel="stylesheet" href="arquivo.css">
+
+
+> Forma Interna
+
+Forma INTERNA: recomenda-se que esteja dentro da tag <head>. Você pode colocar no <body>, mas seria mais confuso.
+
+<style>
+    /* comentário de CSS, dentro desta tag, vai o código CSS, */
+</style>
+
+
+> Forma Inline
+
+Forma INLINE: muito pouco recomendável, é usar para “patches” específicos ou testes. Torna-se difícil mantê-lo.
+
+<h1>Cabeçalho H1 sem formatação</h1>
+<h2 style="CÓDIGO CSS">Cabeçalho H2 com formatação CSS</h2>
+
+<p>Parágrafo sem formatação</p>
+<p style="CÓDIGO CSS">Parágrafo com formatação CSS</p>
+<p>Outro parágrafo sem formatação</p>
+
+
+>>> Sintaxe de CSS
+
+> Regras Sintáticas
+
+- Cada declaração CSS é composta por um conjunto de pares propriedade: valor; 
+- Não é afetado pelo espaço em branco. 
+- As propriedades podem ser escritas em uma linha ou uma abaixo da outra.
+
+> Sintaxe
+
+seletor {
+    propriedade1: valor;
+    propriedade2: valor;
+}
+
+Exemplo:
+
+h1 {
+    color: red;
+}
+
+
+> Pai e filhos
+
+Quando você tem uma tag “dentro” de outra, o que você faz é aplicar o conceito de pais e filhos. 
+Neste caso, section é o pai de article e, por sua vez, article é o pai de h2 e p.
+
+<section>
+    <article>
+        <h2> Título </h2>
+        <p> Lorem ipsum dolor sit amet,
+            consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et
+            dolore magna aliqua. Ut enim ad
+            minim veniam, quis nostrud
+            exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.
+        </p>
+    </article>
+</section>
+
+
+> Isso permite adicionar atributos específicos a “filhos”, sem alterar os do “pai”. 
+Um pai pode ter muitos filhos e todos eles herdam suas características, e também podem ter características particulares.
+
+section article h2 {
+    background-color: #cccccc;
+    width: 500px;
+    height: 500px;
+}
+
+Neste caso, é observada a forma correta de declarar cada estilo.
+Quando você deseja selecionar uma tag, deve incluir as tags pais para que sejam mais específicas ao aplicar estilos.
+
+<section>
+    <article>
+        <h2> Título </h2>
+        <p> Lorem ipsum dolor sit amet,
+            consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et
+            dolore magna aliqua. Ut enim ad
+            minim veniam, quis nostrud
+            exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.
+        </p>
+    </article>
+</section>
+
+
+section {
+    padding: 50px 30px 20px 60px;
+    margin-left: 40px;
+}
+section article {
+    background-color: #cccccc;
+    width: 500px;
+    height: 500px;
+}
+section article p {
+    line-height: 4;
+}
+
+
+>>> Atributo Class
+
+O atributo global class é uma lista das classes de um elemento, separada por espaços.
+Classes permitem que o CSS selecionem e acessem elementos específicos através dos seletores de classe.
+Utilizada quando deseja aplicar o mesmo estilo para mais de um elemento. 
+
+HTML: atributo class=“”
+
+No HTML, para aplicar uma classe você deve usar o atributo “class” e depois colocar no valor o nome da classe. 
+É aconselhável colocar um nome que faça referências aos estilos que terá. 
+
+<img src="" class="bordasArredondadas">
+
+
+> Class a partir de CSS
+
+No CSS, para referenciar a classe que foi criada no HTML basta inserir um “.” à frente do seu nome. Por exemplo:
+
+.bordasArredondadas {
+    /* código CSS */
+}
+
+>>> Mais de uma class
+
+É possível aplicar mais de uma classe para cada tag separada por um espaço. Desta forma, você pode ter estilos 
+diferentes para cada classe.
+
+<img src="" class="bordasArredondadas imgPequena">
+
+
+
+>>> Atributo ID
+
+ID: Geralmente é usado para nomear partes do código e setores como, por exemplo, quando você deseja nomear diferentes 
+seções.
+É possível colocar ID a qualquer elemento HTML para dar a ele um “nome”. 
+
+HTML: Atributo id=“”
+
+Para aplicar um ID no HTML, você deve usar o atributo “id” e, em seguida, no valor o nome do id. 
+
+Por exemplo:
+
+<section id="produtos">
+    Lorem ipsum dolor sit amet
+    consectetur adipisicing elit.
+</section>
+
+
+>>> ID de CSS
+
+No CSS, para referenciar o id que foi criado no HTML basta inserir um “#” à frente do seu nome. Por exemplo:
+
+#produtos {
+    /* código CSS */
+}
+
+
+>>> Comparação - CLASS vs. ID
+
+Exemplo
+
+Tanto a ID como Class podem ser utilizadas dentro do html em diferentes tags.
+No entanto, os nomes dados às classes podem ser repetidos, enquanto os utilizados nas IDs não.
+
+HTML:
+
+<section id="produto">
+    <article class="vermelho">
+    </article>
+    <article id="produto">
+    </article>
+</section>
+
+
+HTML:
+
+<section id="produto">
+    <article class="vermelho">
+    </article>
+    <article class="vermelho">
+    </article>
+</section>
+
+
+>>> Herança e Cascata
+
+
+
+
+
+
+
+
+
