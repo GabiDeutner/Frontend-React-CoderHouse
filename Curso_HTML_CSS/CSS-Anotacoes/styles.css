@@ -1,0 +1,15 @@
+a:hover {
+    color: red;
+  }
+
+  button:active {
+    background-color: green;
+  }
+
+  .visitado:visited {
+    color: purple;
+  }
+
+  input:focus {
+    border: 2px solid blue;
+  }
