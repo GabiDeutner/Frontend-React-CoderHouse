@@ -1,0 +1,10 @@
+
+Descrição da atividade. 
+
+Instruções: Crie alguns elementos usando as tags HTML e insira nesses elementos as 
+pseudo-classes que aprendemos:
+
+Hover
+Active
+Visited
+Focus
