@@ -1,0 +1,26 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+  }
+
+  input[type="checkbox"]:checked + label {
+    color: green;
+    font-weight: bold;
+  }
+
+  input:disabled {
+    background-color: #ccc;
+    color: #666;
+  }
+
+  input:valid {
+    border: 2px solid green;
+  }
+
+  input:invalid {
+    border: 2px solid red;
+  }
+
+  input:required {
+    border: 2px solid blue;
+  }

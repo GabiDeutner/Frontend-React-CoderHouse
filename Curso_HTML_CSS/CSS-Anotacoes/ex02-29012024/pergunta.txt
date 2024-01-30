@@ -1,0 +1,7 @@
+Instruções: Crie alguns elementos usando as tags HTML e insira nesses elementos as pseudo-classes que aprendemos:
+
+checked
+disabled
+valid
+invalid
+required
